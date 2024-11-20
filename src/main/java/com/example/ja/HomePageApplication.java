@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class HomePageApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/homepage.fxml")); // Zorg dat het pad klopt
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Homepage.fxml")); // Zorg dat het pad klopt
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Mijn Homepage");
         stage.setScene(scene);
