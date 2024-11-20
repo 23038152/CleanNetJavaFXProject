@@ -9,6 +9,6 @@ public class HomePageController {
 
     @FXML
     public void handleButtonClick() {
-        System.out.println("Button is geklikt!");
+        System.out.println("Je wordt nu naar de juiste pagine geleid...");
     }
 }
