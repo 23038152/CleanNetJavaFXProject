@@ -9,6 +9,6 @@ public class HomePageController {
 
     @FXML
     public void handleButtonClick() {
-        System.out.println("Directing to the right page");
+        System.out.println("Directing to the right page...");
     }
 }
