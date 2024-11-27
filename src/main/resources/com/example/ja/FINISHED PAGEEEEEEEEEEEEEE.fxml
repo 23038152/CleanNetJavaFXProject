@@ -59,7 +59,7 @@
                         <ToggleButton layoutX="56.0" layoutY="141.0" mnemonicParsing="false" text="Accept request" />
                         <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="14.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@ios-notifications-5-removebg-preview.png" />
+                              <Image url="@../../../Homepage_images/free-notifications-bell-outline-icon-png-701751694974381h7wblk6fpx.png" />
                            </image>
                         </ImageView>
                         <TextField floatText="Clean Net #1" layoutX="33.0" layoutY="14.0" />
