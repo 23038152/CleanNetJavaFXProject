@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="699.0" style="-fx-background-color: #aad3ff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#0979f2" layoutX="140.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="De orginele Clean net, geschikt voor het collecteren van afval in riolering." wrappingWidth="384.31011962890625">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Text>
+      <TextField floatText=" check out" layoutX="259.0" layoutY="303.0" prefHeight="30.0" prefWidth="70.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="222.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField floatText="\$49,95" layoutX="211.0" layoutY="303.0" prefHeight="25.0" prefWidth="48.0" />
+      <ImageView fitHeight="170.0" fitWidth="226.0" layoutX="169.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@OIP.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="270.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@home-icon-illustration-image-vector-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="48.0" layoutX="312.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@notification-icon-md.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="350.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@basket-cart-icon-27.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="499.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
