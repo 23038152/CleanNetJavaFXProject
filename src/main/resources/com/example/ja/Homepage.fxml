@@ -60,7 +60,7 @@
                   <Image url="@../../../images/notification-icon-md.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="aboutusButton1" accessibleRole="MENU_BUTTON" fitHeight="21.0" fitWidth="30.0" layoutX="290.0" layoutY="13.0" onMouseClicked="#handleButtonClickAboutus" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="aboutusButton1" accessibleRole="MENU_BUTTON" fitHeight="21.0" fitWidth="30.0" layoutX="290.0" layoutY="13.0" onMouseClicked="#handleButtonClickAboutUs" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/880594.png" />
                </image>
@@ -81,7 +81,7 @@
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button fx:id="aboutusButton" accessibleRole="MENU_BUTTON" layoutX="239.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonClickAboutus" onMouseClicked="#handleButtonClickAboutus" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="About Us">
+            <Button fx:id="aboutusButton" accessibleRole="MENU_BUTTON" layoutX="239.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonClickAboutUs" onMouseClicked="#handleButtonClickAboutUs" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="About Us">
                <font>
                   <Font size="10.0" />
                </font>
@@ -96,7 +96,7 @@
                   <Image url="@../../../images/notification-icon-md.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="aboutusButton0" fitHeight="29.0" fitWidth="31.0" layoutX="286.0" layoutY="112.0" onMouseClicked="#handleButtonClickAboutus" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="aboutusButton0" fitHeight="29.0" fitWidth="31.0" layoutX="286.0" layoutY="112.0" onMouseClicked="#handleButtonClickAboutUs" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/880594.png" />
                </image>

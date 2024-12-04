@@ -5,19 +5,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import java.io.IOException;
-import javafx.scene.control.Button;
 
 public class HomePageController {
-    @FXML
-    private Button SystemNotifs;  // De naam moet overeenkomen met de fx:id in de FXML
-    @FXML
-    private Button aboutusButton;  // De naam moet overeenkomen met de fx:id in de FXML
-    @FXML
-    private Button webshopButton;  // De naam moet overeenkomen met de fx:id in de FXML
 
-    // Actie voor de notificatieknop
+    @FXML
+    private Button SystemNotifs; // De naam moet overeenkomen met de fx:id in de FXML
+    @FXML
+    private Button AboutUsButton;
+    @FXML
+    private Button WebshopButton;
+
+    // Methode voor de System Notifs knop
     @FXML
     public void handleButtonClickNotifs(ActionEvent event) {
         try {
@@ -35,9 +36,9 @@ public class HomePageController {
         }
     }
 
-    // Actie voor de 'About Us' knop
+    // Methode voor de About Us knop
     @FXML
-    public void handleButtonClickAboutus(ActionEvent event) {
+    public void handleButtonClickAboutUs(ActionEvent event) {
         try {
             // Laad de About Us pagina FXML
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/AboutUsPage.fxml"));
@@ -53,7 +54,7 @@ public class HomePageController {
         }
     }
 
-    // Actie voor de 'Webshop' knop
+    // Methode voor de Webshop knop
     @FXML
     public void handleButtonClickWebshop(ActionEvent event) {
         try {
