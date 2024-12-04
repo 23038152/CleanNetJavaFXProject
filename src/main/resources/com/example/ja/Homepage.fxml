@@ -76,12 +76,12 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="SystemNotifs" accessibleRole="MENU_BUTTON" layoutX="74.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonClickNotifs" onMouseClicked="#handleButtonClickNotifs" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="System Notifications">
+            <Button fx:id="SystemNotifs" accessibleRole="MENU_BUTTON" layoutX="74.0" layoutY="94.0" mnemonicParsing="false" onMouseClicked="#handleButtonClickNotifs" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="System Notifications">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button fx:id="aboutusButton" accessibleRole="MENU_BUTTON" layoutX="239.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonClickAboutUs" onMouseClicked="#handleButtonClickAboutUs" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="About Us">
+            <Button fx:id="aboutusButton" accessibleRole="MENU_BUTTON" layoutX="239.0" layoutY="94.0" mnemonicParsing="false" onMouseClicked="#handleButtonClickAboutUs" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="About Us">
                <font>
                   <Font size="10.0" />
                </font>

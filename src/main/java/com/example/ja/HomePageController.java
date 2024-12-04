@@ -5,22 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.event.ActionEvent;
+import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 
 public class HomePageController {
 
-    @FXML
-    private Button SystemNotifs; // De naam moet overeenkomen met de fx:id in de FXML
-    @FXML
-    private Button AboutUsButton;
-    @FXML
-    private Button WebshopButton;
-
     // Methode voor de System Notifs knop
     @FXML
-    public void handleButtonClickNotifs(ActionEvent event) {
+    public void handleButtonClickNotifs(MouseEvent event) {
         try {
             // Laad de Notificatiepagina FXML
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/MaintenancePage.fxml"));
@@ -38,10 +30,10 @@ public class HomePageController {
 
     // Methode voor de About Us knop
     @FXML
-    public void handleButtonClickAboutUs(ActionEvent event) {
+    public void handleButtonClickAboutUs(MouseEvent event) {
         try {
             // Laad de About Us pagina FXML
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/AboutUsPage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/AboutUS.fxml"));
             Scene aboutUsScene = new Scene(fxmlLoader.load());
 
             // Haal het huidige venster op en wijzig de scene
@@ -56,7 +48,7 @@ public class HomePageController {
 
     // Methode voor de Webshop knop
     @FXML
-    public void handleButtonClickWebshop(ActionEvent event) {
+    public void handleButtonClickWebshop(MouseEvent event) {
         try {
             // Laad de Webshop pagina FXML
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/WebshopPage.fxml"));
