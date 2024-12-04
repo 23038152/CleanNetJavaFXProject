@@ -23,6 +23,7 @@ public class AboutUsApplication extends Application {
             stage.show();
         } catch (Exception e) {
             e.printStackTrace(); // Log fouten als er iets misgaat
+            System.out.println("Foutmelding");
         }
     }
       public static void main(String[] args) {
