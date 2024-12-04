@@ -8,7 +8,7 @@ public class AboutUsController {
     private Label infoLabel;
 
     @FXML
-    public void initialize() {
+    protected void onAboutUsd() {
         infoLabel.setText("Welkom bij de About Us pagina!");
     }
 }
