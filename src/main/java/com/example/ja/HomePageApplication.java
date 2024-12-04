@@ -9,7 +9,7 @@ public class HomePageApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Homepage.fxml")); // Zorg dat het pad klopt
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Homepage");
         stage.setScene(scene);
         stage.show();

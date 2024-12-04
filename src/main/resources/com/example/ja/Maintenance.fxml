@@ -43,6 +43,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TextField?>
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: f;" VBox.vgrow="ALWAYS">
@@ -59,7 +60,7 @@
                         <ToggleButton layoutX="56.0" layoutY="141.0" mnemonicParsing="false" text="Accept request" />
                         <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="14.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../Homepage_images/free-notifications-bell-outline-icon-png-701751694974381h7wblk6fpx.png" />
+                              <Image url="@../../../images/free-notifications-bell-outline-icon-png-701751694974381h7wblk6fpx.png" />
                            </image>
                         </ImageView>
                         <TextField floatText="Clean Net #1" layoutX="33.0" layoutY="14.0" />
@@ -86,17 +87,17 @@
                <children>
                   <ImageView fitHeight="27.0" fitWidth="36.0" layoutX="251.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@880594.png" />
+                        <Image url="@../../../images/880594.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="48.0" fitWidth="30.0" layoutX="290.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@basket-cart-icon-27.png" />
+                        <Image url="@../../../images/basket-cart-icon-27.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="54.0" fitWidth="48.0" layoutX="320.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@home-icon-illustration-image-vector-removebg-preview.png" />
+                        <Image url="@../../../images/home-icon-illustration-image-vector-removebg-preview.png" />
                      </image>
                   </ImageView>
                </children>

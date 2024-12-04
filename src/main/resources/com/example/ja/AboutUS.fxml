@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ja.AboutUsController">
-   <top>
-      <AnchorPane prefHeight="46.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Text layoutX="350.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" wrappingWidth="49.306640625" />
-            <Accordion layoutX="6.0" layoutY="2.0" />
-         </children>
-      </AnchorPane>
-   </top>
-   <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="117.0" fitWidth="203.0" layoutX="-2.0" layoutY="-50.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/AboutUs11.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="372.0" fitWidth="201.0" layoutX="-1.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/AboutUs12.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="201.0" fitWidth="203.0" layoutX="-1.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/AboutUS13.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-   </left>
-   <center>
-      <TextArea prefHeight="200.0" prefWidth="200.0" text="Bij CleanNet werken we eraan om afval uit het afval water te &#10;elimineren en een schonere wereld te creëren. Met ons &#10;afvalstopnet zullen we het afval elimineren voordat het in het&#10; natuurlijke waterwege te recht komt.&#10;&#10;Ons gepassioneerde team combineert technologie met&#10;duurzaamheid om de watervervuiling te verminderen en bij te &#10;dragen aan het Sustainable Development Goal 6 &#10;(Schoon water en sanitaire) Met onze effeciente oplossing &#10;hebben we een positieve impact op de waterkwaliteit en &#10;het leven in zee. Laten we samen werken aan een schonere &#10;toekomst!&#10;&#10;&#10;&#10;&#10;&#10;Contact informatie: &#10;E-mail: CleanNet@gmail.com&#10;Telefoonnummer:  0639011718&#10;" BorderPane.alignment="CENTER" />
-   </center>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ja.AboutUsController">
+   <children>
+      <Text layoutX="259.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" wrappingWidth="81.97332763671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="108.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/AboutUs11.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="125.0" fitWidth="184.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/AboutUs12.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="190.0" fitWidth="184.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/AboutUS13.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="197.0" layoutY="52.0" prefHeight="49.0" prefWidth="360.0" text="Bij CleanNet werken we eraan om afval uit het afval water te elimineren en een schonere wereld te creëren." wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="197.0" layoutY="145.0" prefHeight="87.0" prefWidth="360.0" text="Ons gepassioneerde team combineert technologie metduurzaamheid om de watervervuiling te verminderen en bij te dragen aan het Sustainable Development Goal 6 (Schoon water en sanitaire)." wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Text layoutX="194.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact informatie: " wrappingWidth="154.130859375" />
+      <Text layoutX="194.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail: CleanNet@gmail.com" />
+      <Text layoutX="192.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefoonnummer:  0639011718" />
+      <Label layoutX="197.0" layoutY="93.0" prefHeight="42.0" prefWidth="360.0" text="Met ons afvalstopnet zullen we het afval elimineren voordat het in het natuurlijke waterwegen terecht komt. " wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="197.0" layoutY="220.0" prefHeight="70.0" prefWidth="360.0" text="Met onze effeciente oplossing hebben we een positieve impact op de waterkwaliteit en het leven in zee. Laten we samen werken aan een schonere toekomst!" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="484.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHomePage" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #fe784c; -fx-background-radius: 10px;" text="Homepage" />
+   </children>
+</AnchorPane>

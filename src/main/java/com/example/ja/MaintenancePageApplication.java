@@ -11,7 +11,7 @@ public class MaintenancePageApplication extends Application {
     public void start(Stage stage) {
         try {
             // Zorg dat het pad naar je FXML-bestand klopt
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/FINISHED PAGEEEEEEEEEEEEEE.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Maintenance.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
             // Stel het venster in
