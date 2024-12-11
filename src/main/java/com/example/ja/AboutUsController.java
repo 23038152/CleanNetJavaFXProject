@@ -12,7 +12,23 @@ import java.io.IOException;
 
 public class AboutUsController {
 
+    // Methode voor de Homepage knop
+    @FXML
+    public void handleButtonClickHomepage(MouseEvent event) {
+        try {
+            // Laad de Notificatiepagina FXML
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Homepage.fxml"));
+            Scene notifsScene = new Scene(fxmlLoader.load());
 
+            // Haal het huidige venster op en wijzig de scene
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(notifsScene);
+            stage.setTitle("Homepage");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     // Methode voor de System Notifs knop
     @FXML
@@ -26,6 +42,24 @@ public class AboutUsController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(notifsScene);
             stage.setTitle("Maintenance Page");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Methode voor de Homepage knop
+    @FXML
+    public void handleButtonClickWebshop(MouseEvent event) {
+        try {
+            // Laad de Notificatiepagina FXML
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Webshop.fxml"));
+            Scene notifsScene = new Scene(fxmlLoader.load());
+
+            // Haal het huidige venster op en wijzig de scene
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(notifsScene);
+            stage.setTitle("Homepage");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
