@@ -86,7 +86,7 @@
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button fx:id="webshopButton" accessibleRole="MENU_BUTTON" layoutX="396.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonClickWebshop" onMouseClicked="#handleButtonClickWebshop" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="Webshop">
+            <Button fx:id="webshopButton" accessibleRole="MENU_BUTTON" layoutX="396.0" layoutY="94.0" mnemonicParsing="false" onMouseClicked="#handleButtonClickWebshop" prefHeight="112.0" prefWidth="123.0" style="-fx-background-color: #55faff;" text="Webshop">
                <font>
                   <Font size="10.0" />
                </font>
