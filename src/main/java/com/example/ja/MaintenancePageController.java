@@ -51,7 +51,7 @@ public class MaintenancePageController {
     public void handleButtonClickWebshop() {
         try {
             // Laad de Webshop pagina FXML
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/WebshopPage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Webshop.fxml"));
             Scene webshopScene = new Scene(fxmlLoader.load());
 
             // Haal het huidige venster op en wijzig de scene

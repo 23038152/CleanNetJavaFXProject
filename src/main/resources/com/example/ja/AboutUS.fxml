@@ -38,11 +38,8 @@
          </children>
       </AnchorPane>
    </left>
-   <center>
-      <TextArea prefHeight="200.0" prefWidth="200.0" text="Bij CleanNet werken we eraan om afval uit het afval water te &#10;elimineren en een schonere wereld te creëren. Met ons &#10;afvalstopnet zullen we het afval elimineren voordat het in het&#10; natuurlijke waterwege te recht komt.&#10;&#10;Ons gepassioneerde team combineert technologie met&#10;duurzaamheid om de watervervuiling te verminderen en bij te &#10;dragen aan het Sustainable Development Goal 6 &#10;(Schoon water en sanitaire) Met onze effeciente oplossing &#10;hebben we een positieve impact op de waterkwaliteit en &#10;het leven in zee. Laten we samen werken aan een schonere &#10;toekomst!&#10;&#10;&#10;Contact informatie: &#10;E-mail: CleanNet@gmail.com&#10;Telefoonnummer:  0639011718&#10;" BorderPane.alignment="CENTER" />
-   </center>
    <bottom>
-      <AnchorPane prefHeight="50.0" prefWidth="520.0" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="34.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="HomepageButton" fitHeight="41.0" fitWidth="38.0" layoutX="250.0" layoutY="5.0" onMouseClicked="#handleButtonClickHomepage">
                <image>
@@ -62,4 +59,7 @@
          </children>
       </AnchorPane>
    </bottom>
+   <right>
+      <TextArea prefHeight="253.0" prefWidth="399.0" text="Bij CleanNet werken we eraan om afval uit het afval water te &#10;elimineren en een schonere wereld te creëren. Met ons &#10;afvalstopnet zullen we het afval elimineren voordat het in het&#10;natuurlijke waterwege te recht komt.&#10;&#10;Ons gepassioneerde team combineert technologie met&#10;duurzaamheid om de watervervuiling te verminderen en bij te &#10;dragen aan het Sustainable Development Goal 6 &#10;(Schoon water en sanitaire) Met onze effeciente oplossing &#10;hebben we een positieve impact op de waterkwaliteit en &#10;het leven in zee. Laten we samen werken aan een schonere &#10;toekomst!&#10;&#10;&#10;Contact informatie: &#10;E-mail: CleanNet@gmail.com&#10;Telefoonnummer:  0639011718&#10;" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>
