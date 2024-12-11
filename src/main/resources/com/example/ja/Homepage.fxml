@@ -55,7 +55,7 @@
    <bottom>
       <AnchorPane prefHeight="50.0" prefWidth="520.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="SystemNotifs0" accessibleRole="MENU_BUTTON" fitHeight="21.0" fitWidth="24.0" layoutX="261.0" layoutY="13.0" onMouseClicked="#handleButtonClickNotifs" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="SystemNotifs0" accessibleRole="MENU_BUTTON" fitHeight="22.0" fitWidth="25.0" layoutX="261.0" layoutY="13.0" onMouseClicked="#handleButtonClickNotifs" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/notification-icon-md.png" />
                </image>
