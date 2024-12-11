@@ -50,7 +50,7 @@
                 </TitledPane>
 
                 <!-- Onderste balk -->
-                <AnchorPane layoutY="360.0" prefHeight="40.0" prefWidth="640.0" style="-fx-background-color: #e0e0e0;">
+                <AnchorPane layoutY="360.0" prefHeight="40.0" prefWidth="640.0" style="-fx-background-color: #ECECE7;">
                     <children>
                         <ImageView fx:id="AboutusButton" fitHeight="27.0" fitWidth="36.0" layoutX="307.0" layoutY="17.0" onMouseClicked="#handleButtonClickAboutUs" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -69,7 +69,7 @@
                         </ImageView>
                     </children>
                 </AnchorPane>
-            <AnchorPane prefHeight="48.0" prefWidth="640.0" style="-fx-background-color: #e0e0e0;">
+            <AnchorPane prefHeight="48.0" prefWidth="640.0" style="-fx-background-color: #ECECE7;">
                <children>
                   <ImageView fitHeight="38.0" fitWidth="62.0" layoutX="572.0" layoutY="5.0">
                      <image>

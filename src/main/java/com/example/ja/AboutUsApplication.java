@@ -1,19 +1,21 @@
-package com.example.ja;
+package com.example.ja; // Gebruik jouw pakketnaam
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
-
 public class AboutUsApplication extends Application {
-
-    public static void main(String[] args) {
-        launch(args);
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/AboutUS.fxml")); // Zorg dat het pad klopt
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("About Us");
+        stage.setScene(scene);
+        stage.show();
     }
 
-
-    @Override
-    public void start(Stage primaryStage) {
-
+    public static void main(String[] args) {
+        launch();
     }
 }
