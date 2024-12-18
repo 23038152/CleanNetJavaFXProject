@@ -14,6 +14,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Login scherm");
         stage.setScene(scene);
         stage.show();
+        sql sq = new sql();
+        sq.query();;
     }
 
     public static void main(String[] args) {
