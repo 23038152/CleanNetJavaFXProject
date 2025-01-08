@@ -28,42 +28,6 @@ public class MaintenancePageController {
         // Voeg hier eventueel extra initialisatie toe
     }
 
-    // Methode voor de About Us knop
-    @FXML
-    public void handleButtonClickAboutUs() {
-        try {
-            // Laad de About Us pagina FXML
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/AboutUS.fxml"));
-            Scene aboutUsScene = new Scene(fxmlLoader.load());
-
-            // Haal het huidige venster op en wijzig de scene
-            Stage stage = (Stage) AboutusButton.getScene().getWindow();
-            stage.setScene(aboutUsScene);
-            stage.setTitle("About Us");
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Methode voor de Webshop knop
-    @FXML
-    public void handleButtonClickWebshop() {
-        try {
-            // Laad de Webshop pagina FXML
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Webshop.fxml"));
-            Scene webshopScene = new Scene(fxmlLoader.load());
-
-            // Haal het huidige venster op en wijzig de scene
-            Stage stage = (Stage) WebshopButton.getScene().getWindow();
-            stage.setScene(webshopScene);
-            stage.setTitle("Webshop");
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     // Methode voor de Home knop
     @FXML
     public void handleButtonClickHomepage() {
