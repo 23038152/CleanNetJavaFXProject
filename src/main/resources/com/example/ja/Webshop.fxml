@@ -86,19 +86,9 @@
          <bottom>
             <AnchorPane prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="HomepageButton" fitHeight="41.0" fitWidth="38.0" layoutX="268.0" layoutY="5.0" onMouseClicked="#handleButtonClickHomePage">
+                  <ImageView fx:id="HomepageButton" fitHeight="41.0" fitWidth="38.0" layoutX="301.0" layoutY="5.0" onMouseClicked="#handleButtonClickHomePage">
                      <image>
                         <Image url="@../../../images/home-icon-illustration-image-vector-removebg-preview.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="SystemNotifs" fitHeight="25.0" fitWidth="28.0" layoutX="306.0" layoutY="13.0" onMouseClicked="#handleButtonClickNotifs">
-                     <image>
-                        <Image url="@../../../images/notification-icon-md.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="aboutusButton" fitHeight="25.0" fitWidth="25.0" layoutX="341.0" layoutY="13.0" onMouseClicked="#handleButtonClickAboutUs">
-                     <image>
-                        <Image url="@../../../images/880594.png" />
                      </image>
                   </ImageView>
                </children>

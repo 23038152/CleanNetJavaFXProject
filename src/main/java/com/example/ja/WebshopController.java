@@ -37,7 +37,7 @@ public class WebshopController {
 
     // Methode voor de System Notifs knop
     @FXML
-    public void handleButtonClickNotifs(MouseEvent event) {
+    public void handleButtonClickNotifs (MouseEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/MaintenancePage.fxml"));
             Scene notifsScene = new Scene(fxmlLoader.load());
