@@ -10,6 +10,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class LoginController {
     @FXML
@@ -22,7 +25,7 @@ public class LoginController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if (username.equals("admin") && password.equals("admin")) {
+        if (admin(username, password) || authenticate(username, password)) {
             System.out.println("Login successful!");
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
@@ -40,4 +43,31 @@ public class LoginController {
             System.out.println("Login failed!");
         }
     }
+
+    public boolean admin(String username, String password){
+        if (username.equals("admin") && password.equals("admin")){
+            return true;
+        }
+        else return false;
+    }
+
+    public boolean authenticate(String username, String password) {
+        String url = "jdbc:mysql://localhost:3306/cleannet";
+        String dbUsername = "root";
+        String dbPassword = "bombo";
+
+        try (Connection connection = DriverManager.getConnection(url, dbUsername, dbPassword)) {
+            String sql = "SELECT * FROM Gebruiker WHERE username = ? AND wachtwoord = ?";
+            var preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+
+            var resultSet = preparedStatement.executeQuery();
+            return resultSet.next(); // True als een gebruiker wordt gevonden
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }

@@ -12,7 +12,6 @@ import java.io.IOException;
 
 public class MaintenancePageController {
 
-    // ImageView voor knoppen
     @FXML
     private ImageView AboutusButton;
 
