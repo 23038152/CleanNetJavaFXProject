@@ -2,7 +2,6 @@ package com.example.ja;
 
 import java.sql.*;
 
-
 public class sql {
 
     // Database configuratie

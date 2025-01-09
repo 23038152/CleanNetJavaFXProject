@@ -52,17 +52,7 @@
                 <!-- Onderste balk -->
                 <AnchorPane layoutY="360.0" prefHeight="40.0" prefWidth="640.0" style="-fx-background-color: #ECECE7;">
                     <children>
-                        <ImageView fx:id="AboutusButton" fitHeight="27.0" fitWidth="36.0" layoutX="307.0" layoutY="17.0" onMouseClicked="#handleButtonClickAboutUs" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../images/880594.png" />
-                            </image>
-                        </ImageView>
-                        <ImageView fx:id="WebshopButton" fitHeight="48.0" fitWidth="30.0" layoutX="339.0" layoutY="15.0" onMouseClicked="#handleButtonClickWebshop" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../images/basket-cart-icon-27.png" />
-                            </image>
-                        </ImageView>
-                        <ImageView fx:id="HomepageButton" fitHeight="54.0" fitWidth="48.0" layoutX="259.0" layoutY="6.0" onMouseClicked="#handleButtonClickHomepage" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="HomepageButton" fitHeight="54.0" fitWidth="48.0" layoutX="296.0" layoutY="3.0" onMouseClicked="#handleButtonClickHomepage" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../images/home-icon-illustration-image-vector-removebg-preview.png" />
                             </image>
