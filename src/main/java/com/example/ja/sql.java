@@ -51,8 +51,7 @@ public class sql {
                 while (resultSet.next()) {
                     int sensorId = resultSet.getInt("sensorId");
                     String status = resultSet.getString("status");
-                    String timestamp = resultSet.getString("timestamp");
-                    System.out.println("Sensor ID: " + sensorId + ", Status: " + status + ", Timestamp: " + timestamp);
+                    System.out.println("Sensor ID: " + sensorId + ", Status: " + status);
                 }
             }
         } catch (SQLException e) {
@@ -89,6 +88,25 @@ public class sql {
             e.printStackTrace();
         }
     }
+
+    public static String getSensorStatusById(int sensorId) {
+        String status = null;
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
+            String sql = "SELECT status FROM sensor WHERE sensorId = ?";
+            try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+                pstmt.setInt(1, sensorId);
+                try (ResultSet resultSet = pstmt.executeQuery()) {
+                    if (resultSet.next()) {
+                        status = resultSet.getString("status");
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return status;
+    }
+
 
     // Main-methode om de functionaliteiten te testen
     public static void main(String[] args) {

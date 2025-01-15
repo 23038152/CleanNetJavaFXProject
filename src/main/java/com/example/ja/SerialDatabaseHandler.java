@@ -79,20 +79,29 @@ public class SerialDatabaseHandler {
 
     // Methode om de status van een sensor in de database bij te werken
     private void updateSensorStatus(Connection connection, String status, int sensorId) {
-        String updateQuery = "UPDATE sensor SET status = ?, timestamp = NOW() WHERE sensorId = ?";
-        try (PreparedStatement pstmt = connection.prepareStatement(updateQuery)) {
-            pstmt.setString(1, status); // Stel de nieuwe status in
-            pstmt.setInt(2, sensorId); // Geef het ID van de sensor door
-            int rowsUpdated = pstmt.executeUpdate(); // Voer de update uit
+        // Update de status van de sensor in de sensor-tabel
+        String updateStatusQuery = "UPDATE sensor SET status = ? WHERE sensorId = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(updateStatusQuery)) {
+            pstmt.setString(1, status);
+            pstmt.setInt(2, sensorId);
+            int rowsUpdated = pstmt.executeUpdate();
+
             if (rowsUpdated > 0) {
-                // Bevestigen dat de status succesvol is bijgewerkt
                 System.out.println("✅ Sensorstatus succesvol bijgewerkt in de database.");
+
+                // Voeg een nieuwe regel toe aan de SensorUpdate-tabel om de wijziging vast te leggen
+                String insertUpdateQuery = "INSERT INTO SensorUpdate (sensorId, timestamp, status) VALUES (?, NOW(), ?)";
+                try (PreparedStatement insertPstmt = connection.prepareStatement(insertUpdateQuery)) {
+                    insertPstmt.setInt(1, sensorId);
+                    insertPstmt.setString(2, status);
+                    insertPstmt.executeUpdate();
+                    System.out.println("✅ Sensorupdate succesvol vastgelegd in SensorUpdate.");
+                }
+
             } else {
-                // Waarschuwing als de sensor niet bestaat
                 System.out.println("⚠️ Geen sensor gevonden met ID: " + sensorId);
             }
         } catch (SQLException e) {
-            // Foutafhandeling bij het bijwerken van de sensorstatus
             System.err.println("❌ Fout bij het bijwerken van de sensorstatus!");
             e.printStackTrace();
         }

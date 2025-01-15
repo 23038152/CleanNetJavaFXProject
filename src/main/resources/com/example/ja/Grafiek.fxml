@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ja.GrafiekController">
+    <children>
+        <LineChart fx:id="lineChart" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0">
+            <xAxis>
+                <NumberAxis fx:id="xAxis" label="Tijd (minuten)" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="Status" />
+            </yAxis>
+        </LineChart>
+        <ImageView fx:id="HomepageButton" fitHeight="54.0" fitWidth="48.0" layoutY="366.0" onMouseClicked="#handleButtonClickHomepage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/home-icon-illustration-image-vector-removebg-preview.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

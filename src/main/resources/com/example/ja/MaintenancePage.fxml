@@ -26,7 +26,15 @@
                                         <Image url="@../../../images/free-notifications-bell-outline-icon-png-701751694974381h7wblk6fpx.png" />
                                     </image>
                                 </ImageView>
-                                <Label layoutX="40.0" layoutY="30.0" text="Afvalnet #1" />
+                                <Label layoutX="40.0" layoutY="14.0" prefHeight="27.0" prefWidth="78.0" text="Afvalnet #1">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label layoutX="40.0" layoutY="41.0" text="Sensor Status:" />
+                        <Label fx:id="sensorStatusLabel" layoutX="40.0" layoutY="58.0" prefHeight="27.0" prefWidth="102.0" text="Niet vol">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                             </children>
                         </AnchorPane>
                     </content>
