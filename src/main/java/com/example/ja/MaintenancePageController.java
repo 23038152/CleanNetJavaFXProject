@@ -23,7 +23,7 @@ public class MaintenancePageController {
 
     @FXML
     public void initialize() {
-        // Deze methode wordt aangeroepen zodra de controller is geïnitieerd
+        // Deze methode wordt aangeroepen zodra de controller is geïnitieerd (in gang gezet is.)
         // Voeg hier eventueel extra initialisatie toe
     }
 
