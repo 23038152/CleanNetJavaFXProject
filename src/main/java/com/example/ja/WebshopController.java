@@ -26,7 +26,7 @@ public class WebshopController {
 
     @FXML
     public void initialize() {
-        priceComboBox.getItems().addAll("1 sensor €49,99", "2 sensors €99,98", "3 sensors €149,69", "4 sensors €199,-");
+        priceComboBox.getItems().addAll("1 sensor €49,99", "2 sensors €99,98");
         priceComboBox.setPromptText("Kies een prijs");
     }
 
