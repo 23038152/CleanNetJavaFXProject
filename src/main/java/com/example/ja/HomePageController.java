@@ -63,4 +63,21 @@ public class HomePageController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void handleButtonGrafiek(MouseEvent event) {
+        try {
+            // Laad de Grafiek pagina FXML
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/ja/Grafiek.fxml"));
+            Scene grafiekScene = new Scene(fxmlLoader.load());
+
+            // Haal het huidige venster op en wijzig de scene
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(grafiekScene);
+            stage.setTitle("Grafiek");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
