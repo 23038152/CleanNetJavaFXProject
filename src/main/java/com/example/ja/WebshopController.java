@@ -33,7 +33,7 @@ public class WebshopController {
     // Methode voor de Koop-knop
     @FXML
     private void handleKoopButtonClick() {
-        winkelmandjeLabel.setText("Toegevoegd aan winkelmandje!");
+        winkelmandjeLabel.setText("Product besteld!");
 
         // Tekst na 3 seconden laten verdwijnen
         PauseTransition pause = new PauseTransition(Duration.seconds(2));

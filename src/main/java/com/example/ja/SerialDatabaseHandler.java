@@ -28,29 +28,26 @@ public class SerialDatabaseHandler {
 
     // Methode om verbinding te maken met de seriële poort
     public boolean connectSerialPort() {
-        if (!serialPort.openPort()) { // Controleer of de poort kan worden geopend
-            System.err.println("❌ Kan geen verbinding maken met de seriële poort.");
-            return false;
+        if (serialPort.openPort()) { // Controleer of de poort kan worden geopend
+            System.out.println("✅ Verbonden met de Arduino!"); // Bevestiging van verbinding
+            return true;
         }
-        System.out.println("✅ Verbonden met de Micro:bit!");
-        return true;
+        System.err.println("❌ Kan geen verbinding maken met de seriële poort."); // Foutmelding
+        return false;
     }
 
     // Methode om verbinding te maken met de database en ontvangen data te verwerken
     public boolean connectDatabaseAndProcessData() {
-        // Probeert verbinding te maken met de database
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
-            System.out.println("✅ Verbonden met de database!");
-
+            System.out.println("✅ Verbonden met de database!"); // Bevestiging van verbinding
             byte[] buffer = new byte[1024]; // Buffer om inkomende data op te slaan in max 1024 bytes per keer
+
             while (serialPort.isOpen()) { // Blijf data lezen zolang de poort open is
                 int numBytes = serialPort.readBytes(buffer, buffer.length); // Lees data van de seriële poort
                 if (numBytes > 0) { // Controleer of data is ontvangen
-                    String dataChunk = new String(buffer, 0, numBytes); // Converteer bytes naar string
-                    tempBuffer.append(dataChunk); // Voeg data toe aan de tijdelijke buffer
+                    tempBuffer.append(new String(buffer, 0, numBytes)); // Voeg ontvangen data toe aan buffer
 
-                    // Controleer op een volledige berichtstructuur
-                    int newlineIndex = tempBuffer.indexOf("\n");
+                    int newlineIndex = tempBuffer.indexOf("\n"); // Zoek naar een nieuwe lijn in de buffer
                     while (newlineIndex != -1) { // Verwerk berichten totdat er geen nieuwe lijn meer is
                         String completeMessage = tempBuffer.substring(0, newlineIndex).trim(); // Haal een volledig bericht op
                         tempBuffer.delete(0, newlineIndex + 1); // Verwijder verwerkt bericht uit buffer
@@ -58,10 +55,10 @@ public class SerialDatabaseHandler {
                         System.out.println("Ontvangen volledig bericht: [" + completeMessage + "]");
 
                         // Controleer of het bericht geldig is
-                        if (completeMessage.equals("Vol") || completeMessage.equals("Niet vol")) {
+                        if ("Vol".equals(completeMessage) || "Niet vol".equals(completeMessage)) {
                             updateSensorStatus(connection, completeMessage, 1); // Verwerk geldig bericht
                         } else {
-                            System.err.println("❌ Ongeldig bericht ontvangen: [" + completeMessage + "]");
+                            System.err.println("❌ Ongeldig bericht ontvangen: [" + completeMessage + "]"); // Ongeldig bericht
                         }
 
                         newlineIndex = tempBuffer.indexOf("\n"); // Zoek naar het volgende bericht
@@ -79,30 +76,30 @@ public class SerialDatabaseHandler {
 
     // Methode om de status van een sensor in de database bij te werken
     private void updateSensorStatus(Connection connection, String status, int sensorId) {
-        // Update de status van de sensor in de sensor-tabel
-        String updateStatusQuery = "UPDATE sensor SET status = ? WHERE sensorId = ?";
-        try (PreparedStatement pstmt = connection.prepareStatement(updateStatusQuery)) {
-            pstmt.setString(1, status);
-            pstmt.setInt(2, sensorId);
-            int rowsUpdated = pstmt.executeUpdate();
+        String updateSensorQuery = "UPDATE sensor SET status = ? WHERE sensorId = ?";
+        String insertSensorUpdateQuery = "INSERT INTO SensorUpdate (sensorId, timestamp, status) VALUES (?, NOW(), ?)";
+
+        try (PreparedStatement updateStmt = connection.prepareStatement(updateSensorQuery);
+             PreparedStatement insertStmt = connection.prepareStatement(insertSensorUpdateQuery)) {
+
+            // Update de status in de `sensor`-tabel
+            updateStmt.setString(1, status);
+            updateStmt.setInt(2, sensorId);
+            int rowsUpdated = updateStmt.executeUpdate();
 
             if (rowsUpdated > 0) {
-                System.out.println("✅ Sensorstatus succesvol bijgewerkt in de database.");
+                System.out.println("✅ Sensorstatus succesvol bijgewerkt. Sensor ID: " + sensorId + ", Status: " + status);
 
-                // Voeg een nieuwe regel toe aan de SensorUpdate-tabel om de wijziging vast te leggen
-                String insertUpdateQuery = "INSERT INTO SensorUpdate (sensorId, timestamp, status) VALUES (?, NOW(), ?)";
-                try (PreparedStatement insertPstmt = connection.prepareStatement(insertUpdateQuery)) {
-                    insertPstmt.setInt(1, sensorId);
-                    insertPstmt.setString(2, status);
-                    insertPstmt.executeUpdate();
-                    System.out.println("✅ Sensorupdate succesvol vastgelegd in SensorUpdate.");
-                }
-
+                // Voeg een nieuwe regel toe in de `SensorUpdate`-tabel
+                insertStmt.setInt(1, sensorId);
+                insertStmt.setString(2, status);
+                insertStmt.executeUpdate();
+                System.out.println("✅ Sensorupdate succesvol toegevoegd aan `SensorUpdate`-tabel.");
             } else {
-                System.out.println("⚠️ Geen sensor gevonden met ID: " + sensorId);
+                System.err.println("⚠️ Geen sensor gevonden met ID: " + sensorId);
             }
         } catch (SQLException e) {
-            System.err.println("❌ Fout bij het bijwerken van de sensorstatus!");
+            System.err.println("❌ Fout bij het bijwerken van de sensorstatus!"); // Foutmelding
             e.printStackTrace();
         }
     }
