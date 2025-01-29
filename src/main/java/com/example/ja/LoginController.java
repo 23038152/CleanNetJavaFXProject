@@ -47,7 +47,7 @@ public class LoginController {
             }
         } else {
             // Toon een foutmelding als de login niet succesvol is
-            System.out.println("Login failed!");
+            System.err.println("Login failed!");
         }
     }
 

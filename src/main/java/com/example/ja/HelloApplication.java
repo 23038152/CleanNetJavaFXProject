@@ -22,7 +22,7 @@ public class HelloApplication extends Application {
     }
     private void startSerialCommunication() {
         // Maak een nieuwe instantie van SerialDatabaseHandler en stel de poort en baudrate in
-        SerialDatabaseHandler handler = new SerialDatabaseHandler("COM4", 9600); // Vervang "COM4" met de juiste seriële poortnaam
+        SerialDatabaseHandler handler = new SerialDatabaseHandler("COM5", 9600); // Vervang "COM5" met de juiste seriële poortnaam
 
         // Maak verbinding met de seriële poort
         if (handler.connectSerialPort()) {
